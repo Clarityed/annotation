@@ -36,6 +36,28 @@ class User {
     private String name;
     private int id;
     private int age;
+    public int status;
+
+    private User(String name) {
+
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", age=" + age +
+                ", status=" + status +
+                '}';
+    }
+
+    public User(String name, int id, int age, int status) {
+        this.name = name;
+        this.id = id;
+        this.age = age;
+        this.status = status;
+    }
 
     public User() {
     }
@@ -48,6 +70,14 @@ class User {
 
     public String getName() {
         return name;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     public void setName(String name) {
@@ -70,12 +100,6 @@ class User {
         this.age = age;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
-                ", age=" + age +
-                '}';
-    }
+    private void test() {}
+
 }
